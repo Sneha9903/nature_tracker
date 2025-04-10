@@ -20,7 +20,7 @@ a {
 /* --- Hero Section (Homepage) --- */
 .hero-section {
     height: 100vh; /* Full viewport height */
-    background-image: url('images/front _background.png'); /* --- CHANGE THIS TO YOUR IMAGE PATH --- */
+    background-image: url('front _background.png'); /* --- CHANGE THIS TO YOUR IMAGE PATH --- */
     background-size: cover;
     background-position: center center;
     display: flex;
