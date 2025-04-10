@@ -1,0 +1,220 @@
+/* --- General Styles --- */
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f2; /* Light beige background for parameter page */
+    color: #333;
+    line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit; /* Inherit color by default */
+}
+
+/* --- Hero Section (Homepage) --- */
+.hero-section {
+    height: 100vh; /* Full viewport height */
+    background-image: url('images/front _background.png'); /* --- CHANGE THIS TO YOUR IMAGE PATH --- */
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative; /* Needed for the overlay */
+    color: #ffffff; /* White text */
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Dark overlay */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative; /* Ensure content is above overlay */
+    z-index: 2;
+    padding: 20px;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem; /* Larger title */
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #3b594e; /* Dark teal/green from image */
+    color: #ffffff;
+    padding: 12px 35px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cta-button:hover {
+    background-color: #2f473e; /* Slightly darker on hover */
+    transform: translateY(-2px);
+}
+
+/* --- Parameters Section (parameters.html) --- */
+.parameters-section {
+    padding: 60px 20px; /* More padding */
+    background-color: #f7f7f2; /* Matching the image background */
+}
+
+.parameters-container {
+    max-width: 800px; /* Control max width of the grid area */
+    margin: 0 auto; /* Center the container */
+    text-align: center;
+}
+
+.parameters-container h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.parameters-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
+    gap: 25px; /* Space between cards */
+    margin-bottom: 40px; /* Space before back link */
+}
+
+.parameter-card {
+    background-color: #ffffff; /* White card background */
+    border-radius: 12px; /* More rounded corners */
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); /* Subtle shadow */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    min-height: 180px; /* Ensure cards have a minimum height */
+}
+
+.parameter-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+}
+
+.parameter-icon {
+    font-size: 3.5em; /* Larger icons */
+    color: #3b594e; /* Icon color matching button */
+    margin-bottom: 20px;
+    position: relative; /* For potential icon layering */
+    line-height: 1; /* Prevent extra space */
+    display: inline-flex; /* Helps center layered icons */
+    align-items: center;
+    justify-content: center;
+}
+
+/* Adjust specific icons if needed (Example) */
+.parameter-icon .fa-tree-city {
+    /* Specific adjustments for one icon */
+    /* opacity: 0.8; */
+}
+
+
+.parameter-label {
+    font-size: 1.15em;
+    font-weight: 500;
+    color: #333;
+}
+
+.back-link {
+    margin-top: 20px;
+    font-size: 0.95em;
+}
+
+.back-link a {
+   color: #3b594e;
+   font-weight: 500;
+}
+
+.back-link a:hover {
+    text-decoration: underline;
+}
+
+/* --- Footer (Optional) --- */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px; /* Only relevant if footer is used */
+    background-color: #e8e8e0; /* Slightly darker beige */
+    font-size: 0.9em;
+    color: #666;
+}
+
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.8rem;
+    }
+    .hero-content p {
+        font-size: 1.1rem;
+    }
+    .parameters-grid {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 20px;
+    }
+    .parameter-card {
+        padding: 25px 15px;
+    }
+    .parameter-icon {
+        font-size: 3em;
+    }
+    .parameter-label {
+        font-size: 1.05em;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+     .hero-content p {
+        font-size: 1rem;
+    }
+    .parameters-grid {
+        /* Stack cards on very small screens */
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+     .parameter-card {
+        min-height: auto; /* Remove min-height when stacked */
+    }
+    .parameters-container h2 {
+        font-size: 1.6rem;
+    }
+     .cta-button {
+        padding: 10px 25px;
+        font-size: 1rem;
+    }
+}
