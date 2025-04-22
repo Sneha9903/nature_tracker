@@ -1,0 +1,99 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f0f2f5, #dbeafe);
+    margin: 0;
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    color: #1e3a8a;
+    margin-bottom: 30px;
+  }
+  
+  .dropdown-section {
+    margin-bottom: 30px;
+  }
+  
+  select,
+  button {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin: 10px;
+  }
+  
+  #plotBtn, #resetBtn {
+    background-color: #3b82f6;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  #plotBtn:hover,
+  #resetBtn:hover {
+    background-color: #2563eb;
+  }
+  
+  .chart-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 16px;
+    max-width: 1000px;
+    margin: 0 auto;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  }
+  
+  /* Checkbox Container */
+  .country-checkbox-box {
+    background: white;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+    max-width: 700px;
+    margin: 20px auto;
+  }
+  
+  /* Country label above checkboxes */
+  .country-checkbox-box label {
+    font-weight: 600;
+    color: #1e293b;
+    display: block;
+    margin-bottom: 12px;
+    font-size: 16px;
+  }
+  
+  /* Checkbox list container */
+  .checkbox-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    max-height: 180px;
+    overflow-y: auto;
+    padding-right: 5px;
+  }
+  
+  /* Each individual checkbox pill */
+  .checkbox-list label {
+    display: flex;
+    align-items: center;
+    background: #f1f5f9;
+    padding: 6px 12px;
+    border-radius: 9999px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #334155;
+    transition: background 0.2s ease;
+  }
+  
+  .checkbox-list label:hover {
+    background: #dbeafe;
+  }
+  
+  .checkbox-list input[type="checkbox"] {
+    margin-right: 8px;
+    accent-color: #2563eb;
+  }
+  
