@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     let data = [];
 
     try {
-      const response = await fetch("deforestation_data.csv");
+      const response = await fetch("./deforestation_data.csv");
       if (!response.ok) throw new Error("Failed to load CSV");
       const text = await response.text();
       const rows = text.trim().split("\n").slice(1);
